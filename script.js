@@ -12,18 +12,25 @@ const rotationValues = [
 ];
 const data = [16, 16, 16, 16, 16, 16];
 var pieColors = [
-    "#00137c", 
-    "#a3a4f1", 
-    "#00137c", 
-    "#a3a4f1", 
-    "#00137c", 
-    "#a3a4f1",
+    "#55718a", 
+    "#0f4c81", 
+    "#55718a", 
+    "#0f4c81", 
+    "#55718a", 
+    "#0f4c81",
 ];
 let myChart = new Chart(wheel, {
     plugins: [ChartDataLabels],
     type: "pie",
     data: {
-        labels: ["España", "Francia", "Tailandia", "Italia", "China", "Estados Unidos"],
+        labels: [
+            "España",
+            "Francia", 
+            "Tailandia", 
+            "Italia", 
+            "China", 
+            "Estados \n Unidos"
+        ],
         datasets: [
             {
             backgroundColor: pieColors,
