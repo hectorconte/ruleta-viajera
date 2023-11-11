@@ -2,28 +2,28 @@ const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");
 const rotationValues = [
-    {minDegree:0, maxDegree:30, value:2},
-    {minDegree:31, maxDegree:90, value:1},
-    {minDegree:91, maxDegree:150, value:6},
-    {minDegree:151, maxDegree:210, value:5},
-    {minDegree:211, maxDegree:270, value:4},
-    {minDegree:271, maxDegree:330, value:3},
-    {minDegree:331, maxDegree:360, value:2},
+    {minDegree:0, maxDegree:30, value:"Francia"},
+    {minDegree:31, maxDegree:90, value:"España"},
+    {minDegree:91, maxDegree:150, value:"Estados Unidos"},
+    {minDegree:151, maxDegree:210, value:"China"},
+    {minDegree:211, maxDegree:270, value:"Italia"},
+    {minDegree:271, maxDegree:330, value:"Tailandia"},
+    {minDegree:331, maxDegree:360, value:"Francia"},
 ];
 const data = [16, 16, 16, 16, 16, 16];
 var pieColors = [
-    "#8b35bc", 
-    "#b163da", 
-    "#8b35bc", 
-    "#b163da", 
-    "#8b35bc", 
-    "#b163da",
+    "#00137c", 
+    "#a3a4f1", 
+    "#00137c", 
+    "#a3a4f1", 
+    "#00137c", 
+    "#a3a4f1",
 ];
 let myChart = new Chart(wheel, {
     plugins: [ChartDataLabels],
     type: "pie",
     data: {
-        labels: [1, 2, 3, 4, 5, 6],
+        labels: ["España", "Francia", "Tailandia", "Italia", "China", "Estados Unidos"],
         datasets: [
             {
             backgroundColor: pieColors,
@@ -51,7 +51,7 @@ let myChart = new Chart(wheel, {
 const valueGenerator = (angleValue) => {
     for(let i of rotationValues){
         if(angleValue >= i.minDegree && angleValue <= i.maxDegree){
-            finalValue.innerHTML = `<p>Value: ${i.value}</p>`;
+            finalValue.innerHTML = `<p>Tu próximo destino será: ${i.value}</p>`;
             spinBtn.disabled = false;
             break;
         }
