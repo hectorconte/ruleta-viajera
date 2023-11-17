@@ -1,4 +1,4 @@
-# ruleta-viajera
+# Ruleta Viajera
 
 Una ruleta que te ayuda a elegir tus próximas vacaciones.
 
